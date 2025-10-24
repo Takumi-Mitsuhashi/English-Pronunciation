@@ -23,9 +23,9 @@ export default async function handler(req, res) {
   // メール本文フォーマット
     const mailBody = `
   【名前】 ${name}
-  【Email】 ${email}
-  【件名】 ${name}
-  【内容】
+【Email】 ${email}
+【件名】 ${name}
+【内容】
   ${message}
     `.trim();
 

@@ -8,6 +8,8 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
 
+  const [choice, setChoice] = useState("");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -31,17 +33,101 @@ export default function ContactForm() {
     }
   };
 
+  const getPlaceholder = () => {
+    switch (choice) {
+      case "question":
+        return "少しでも気になったこと、疑問に思ったことがございましたらお気軽にご質問ください。";
+      case "comment":
+        return "アプリをご利用いただきありがとうございます。ご感想がございましたらお待ちしております。大変励みになります！";
+      case "feedback":
+        return "もっとこうして欲しいなど、改善点があればどしどしお待ちしております。";
+      default:
+        return "";
+    }
+  };
+
   return (
     <>
+    <div className={styles.parentContainer}>
       <Header onClick={() => navigate("/")} />
+      <div className={styles.formContainer}>
       <form onSubmit={handleSubmit} className={styles.form}>
         <h2>お問い合わせ</h2>
-        <input name="name" placeholder="お名前" onChange={handleChange} value={formData.name} required />
-        <input name="email" placeholder="メールアドレス" onChange={handleChange} value={formData.email} required />
-        <textarea name="message" placeholder="メッセージ" onChange={handleChange} value={formData.message} required />
-        <button type="submit">送信</button>
-        <p>{status}</p>
+        <div className={styles.labelContainer}>
+          <div>必須</div>
+          <p>お名前</p>
+        </div>
+        <input 
+          name="name"
+          placeholder="山田　太郎"
+          onChange={handleChange}
+          value={formData.name}
+          required
+        />
+        <div className={styles.labelContainer}>
+          <div>必須</div>
+          <p>メールアドレス</p>
+        </div>
+        <input 
+          name="email"
+          placeholder="sample@english.com"
+          onChange={handleChange}
+          value={formData.email}
+          required
+        />
+        <div className={styles.labelContainer}>
+          <div>必須</div>
+          <p>内容</p>
+        </div>
+        <div className={styles.radiobtnContainer}>
+        <label>
+          <input 
+            type="radio"
+            name="category"
+            value="question"
+            checked={choice === "question"}
+            onChange={(e) => setChoice(e.target.value)}
+          />
+          ご質問
+        </label>
+        <label>
+          <input 
+            type="radio"
+            name="category"
+            value="comment"
+            checked={choice === "comment"}
+            onChange={(e) => setChoice(e.target.value)}
+          />
+          ご感想
+        </label>
+        <label>
+          <input 
+            type="radio"
+            name="category"
+            value="feedback"
+            checked={choice === "feedback"}
+            onChange={(e) => setChoice(e.target.value)}
+          />
+          フィードバック
+        </label>
+        </div>
+        <textarea
+          name="message"
+          placeholder={getPlaceholder()}
+          onChange={handleChange}
+          value={formData.message}
+          required
+        />
+        <button
+          type="submit"
+          className={styles.submitbtn}
+        >
+          送信
+        </button>
+        {status ? (<p>{status}</p>) : null}
       </form>
+      </div>
+    </div>
     </>
   );
 }
