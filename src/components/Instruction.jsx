@@ -1,6 +1,6 @@
 import styles from "./instruction.module.css";
 import question8B from "../assets/icons/question_8B7DBE.svg";
-import close_purple from "../assets/icons/close_a260bf.svg";
+import close_purple from "../assets/icons/close_A260BF.svg";
 import { useState } from "react";
 
 export default function Instruction({label}) {
