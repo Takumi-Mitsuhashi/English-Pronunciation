@@ -1,0 +1,62 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.circleButton {
+  width: 80%;
+  height: 80px;
+  border-radius: 8px;
+  border: none;
+  /* background: linear-gradient(145deg, #ffffff, #d9d9d9); */
+  background: white;
+  /* box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff; */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.circleButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 16px #b0b0b0, -8px -8px 16px #ffffff;
+}
+
+.circleButton:active {
+  transform: translateY(0px);
+  /* box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff; */
+}
+
+.parentContainer {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+  /* border: 1px solid black; */
+}
+
+.checkmark {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid gainsboro;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+}
+
+.arrowright {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translate(0, -50%);
+}

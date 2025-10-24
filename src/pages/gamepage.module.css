@@ -1,0 +1,39 @@
+.parentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.submitContainer {
+    margin-top: 66px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submitbtn, .finishbtn {
+    color: #fff;
+    /* box-shadow: 0 2px 10px rgba(108, 92, 231, 0.4); */
+    /* background-color: #97C5B0; */
+    border: none;
+    padding: 15px;
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.submitbtn {
+    background: #6c5ce7;
+}
+
+.finishbtn {
+    background-color: #d1a1ff;
+}

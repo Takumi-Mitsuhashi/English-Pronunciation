@@ -1,0 +1,120 @@
+/* ===================== */
+/* 共通・全体レイアウト */
+/* ===================== */
+.parentContainer {
+  background: #f8f6fc;
+  margin: 0;
+  padding: 0;
+}
+
+.scoreContainer {
+  text-align: center;
+  padding: 15px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.scoreContainer h2 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.scoreContainer p {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+/* ===================== */
+/* ボタン系スタイル */
+/* ===================== */
+.btnContainer {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0 10px;
+}
+
+.backhomebtn,
+.selectlevelbtn {
+  border: none;
+  padding: 10px;
+  width: 40%;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.backhomebtn {
+  background-color: #7e9cff;
+}
+
+.selectlevelbtn {
+  background-color: #d1a1ff;
+}
+
+.backhomebtn:hover,
+.selectlevelbtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ===================== */
+/* 結果リスト部分 */
+/* ===================== */
+.resultlists {
+  max-width: 100vw;
+  list-style: none;
+  padding: 30px;
+  margin: 0;
+}
+
+.listeachitem {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ===================== */
+/* 各リスト項目（Resultlists.jsx） */
+/* ===================== */
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.correctContainer1,
+.correctContainer2,
+.correctContainer3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.playButton {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

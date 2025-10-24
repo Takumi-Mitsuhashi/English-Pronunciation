@@ -1,0 +1,82 @@
+.parentContainer {
+    background: #d7d1e4;
+    position: relative;
+    height: 45vh;
+    border-radius: 0 0 20px 20px;
+}
+
+.titleContainer {
+    width: 300px;
+    margin: 30px auto;
+    padding: 35px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: "sans-serif";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.titleContainer::before {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background: purple;
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    z-index: 4;
+}
+
+.titleContainer::after {
+    content: "";
+    width: 1px;
+    height: 40px;
+    background: purple;
+    position: absolute;
+    top: 4%;
+    left: 7%;
+    z-index: 4;
+}
+
+
+.startbtn {
+    /* background: #a260bf; */
+    /* background: #6c5ce7; */
+    background: linear-gradient(135deg, #6c5ce7, #a260bf);
+    border: none;
+    width: 120px;
+    height: 38px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(108, 92, 231, 0.4);
+}
+
+.startbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(108, 92, 231, 0.5);
+}
+
+.guideContainer {
+    padding:0;
+    display: flex;
+    flex-direction: column;
+}   
+
+.guideContainer p {
+    display: flex;
+}
+
+.rule {
+    border-left: 3px solid #6c5ce7; 
+    display: inline-block;
+    margin: 40px 0 7px;
+    padding-left: 7px;
+}
+

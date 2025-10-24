@@ -1,0 +1,50 @@
+/* .bubbleContainer {
+    position: absolute;
+    top: 150%;
+    left: 2%;
+} */
+
+.balloonBottomLeft {
+	position: absolute;
+	display: inline-block;
+	padding: 0 15px;
+	min-width: 80px;
+	height: 50px;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+	background: #19283C;
+	/* border-radius: 10px; */
+    border-radius: 60%;
+    top: 79%;
+    left: 4%;
+
+}
+
+/* 吹き出しのしっぽ部分 */
+.balloonBottomLeft::before { 
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 20px;
+	width: 30px;
+	height: 30px;
+	background: #19283C;
+	border-radius: 0 30px 0 30px;
+	/* z-index: -1; */
+    z-index: -1;
+}
+
+/* 白背景との境目調整用（外枠のようなもの） */
+.balloonBottomLeft::after {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 30px;
+	width: 30px;
+	height: 30px;
+	background: #f8f6fc;
+	border-radius: 0 30px 0 30px;
+	z-index: -1;
+	transform: rotate(30deg);
+}

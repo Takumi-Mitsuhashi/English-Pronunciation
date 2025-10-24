@@ -1,0 +1,63 @@
+.parentContainer {
+  background: #f8f6fc;
+}
+
+.scoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scoreContainer p {
+    font-size: 20px;
+}
+
+.btnContainer {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0 10px;
+}
+
+.backhomebtn,
+.retrybtn {
+  border: none;
+  padding: 10px;
+  width: 40%;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.backhomebtn {
+  background-color: #7e9cff;
+}
+
+.retrybtn {
+  background-color: #d1a1ff;
+}
+
+.backhomebtn:hover,
+.retrybtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.resultlists {
+  max-width: 100vw;
+  list-style: none;
+  padding: 30px;
+  margin: 0;
+}
+
+.listeachitem {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}

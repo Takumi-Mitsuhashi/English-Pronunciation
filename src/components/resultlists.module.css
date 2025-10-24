@@ -1,0 +1,79 @@
+.btnContainer {
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    /* border: 1px solid black; */
+}
+
+.backhomebtn, .selectlevelbtn {
+    border: none;
+    padding: 10px;
+    width: 40%;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.backhomebtn {
+    background-color: #F6ADC6;
+}
+
+.selectlevelbtn {
+    background-color: #F9AE94;
+}
+
+.resultlists {
+    max-width: 100vw;
+    list-style: none;
+    /* border: 1px solid black; */
+    padding: 10px;
+    margin: 0;
+}
+
+.listeachitem {
+    /* border: 1px solid black; */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.results {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.correctContainer1, .correctContainer2 {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.playButton {
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
