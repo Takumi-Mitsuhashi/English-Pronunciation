@@ -29,7 +29,7 @@
     /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
 }
 
-.inputname, .inputemail, textarea {
+.inputname, .inputemail {
     border: 1px solid lightgray;
     border-radius: 5px;
     width: 100%;
@@ -38,6 +38,10 @@
     box-sizing: border-box;
     margin-bottom: 30px;
     font-size: 15px;
+}
+
+textarea {
+    margin-bottom: 15px;
 }
 
 .labelContainer {
@@ -106,6 +110,7 @@ input[type="radio"]:checked {
     background: linear-gradient(135deg, #6c5ce7, #a260bf);
     color: white;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .submitbtnContainer {
@@ -113,4 +118,8 @@ input[type="radio"]:checked {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.submitbtnContainer p {
+    margin: 0;
 }
