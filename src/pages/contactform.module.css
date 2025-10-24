@@ -29,23 +29,21 @@
     /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
 }
 
-.form input, textarea {
+.inputname, .inputemail, textarea {
     border: 1px solid lightgray;
     border-radius: 5px;
     width: 100%;
     height: 40px;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.inputname, .inputemail, textarea {
     margin-bottom: 30px;
+    font-size: 13px;
 }
 
 .labelContainer {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     /* border: 1px solid black; */
     padding: 0;
 }
@@ -54,11 +52,17 @@
     margin: 0;
 }
 
+.labelContainer p {
+    padding: 0;
+}
+
 .labelContainer div {
+    display: flex;
+    align-items: center;
     background: #a260bf;
     color: white;
-    padding: 3px 5px;
-    font-size: 13px;
+    padding: 1px 5px;
+    font-size: 12px;
 }
 
 .labelContainer p {
@@ -70,6 +74,10 @@
     flex-direction: row;
     gap: 25px;
     /* border: 1px solid black; */
+}
+
+input[type="radio"]:checked {
+  accent-color: black; 
 }
 
 .radiobtnContainer label {
