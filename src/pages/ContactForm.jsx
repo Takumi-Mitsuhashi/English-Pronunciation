@@ -8,7 +8,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
 
-  const [choice, setChoice] = useState("");
+  const [choice, setChoice] = useState("question");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -58,6 +58,7 @@ export default function ContactForm() {
           <p>お名前</p>
         </div>
         <input 
+          className={styles.inputname}
           name="name"
           placeholder="山田　太郎"
           onChange={handleChange}
@@ -69,6 +70,7 @@ export default function ContactForm() {
           <p>メールアドレス</p>
         </div>
         <input 
+          className={styles.inputemail}
           name="email"
           placeholder="sample@english.com"
           onChange={handleChange}
@@ -118,13 +120,15 @@ export default function ContactForm() {
           value={formData.message}
           required
         />
+        <div className={styles.submitbtnContainer}>
+          {status ? (<p>{status}</p>) : null}
         <button
           type="submit"
           className={styles.submitbtn}
         >
           送信
         </button>
-        {status ? (<p>{status}</p>) : null}
+        </div>
       </form>
       </div>
     </div>
