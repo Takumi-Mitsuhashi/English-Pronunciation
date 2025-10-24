@@ -20,12 +20,21 @@ export default async function handler(req, res) {
     },
   });
 
+  // メール本文フォーマット
+    const mailBody = `
+  【名前】 ${name}
+  【Email】 ${email}
+  【件名】 ${name}
+  【内容】
+  ${message}
+    `.trim();
+
   try {
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: process.env.GMAIL_USER,
       subject: "【お問い合わせ】" + name,
-      text: message,
+      text: mailBody,
     });
 
     res.status(200).json({ success: true });
