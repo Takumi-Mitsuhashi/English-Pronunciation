@@ -52,7 +52,7 @@ export default function Home() {
             </button>
             <button 
               className={styles.agentbtnnext}
-              // onClick={() => navigate("/ContactForm")}
+              onClick={() => navigate("/ContactForm")}
             >
               お問い合わせ
               <img src={arrowright} className={styles.arrowright}/>
