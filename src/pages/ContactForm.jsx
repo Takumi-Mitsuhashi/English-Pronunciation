@@ -54,28 +54,26 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className={styles.form}>
         <h2>お問い合わせ</h2>
         <div className={styles.labelContainer}>
-          <div>必須</div>
+          <span>(任意)</span>
           <p>お名前</p>
         </div>
         <input 
           className={styles.inputname}
           name="name"
-          placeholder="山田　太郎"
+          placeholder="匿名で結構です。"
           onChange={handleChange}
           value={formData.name}
-          required
         />
         <div className={styles.labelContainer}>
-          <div>必須</div>
+          <span>(任意)</span>
           <p>メールアドレス</p>
         </div>
         <input 
           className={styles.inputemail}
           name="email"
-          placeholder="sample@english.com"
+          placeholder="返信ご希望の場合は、記入をお願い致します。"
           onChange={handleChange}
           value={formData.email}
-          required
         />
         <div className={styles.labelContainer}>
           <div>必須</div>
