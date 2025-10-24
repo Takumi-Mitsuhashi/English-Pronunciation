@@ -18,11 +18,23 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("送信中...");
 
+    const dataToSend = {
+      name: formData.name.trim() || "匿名",
+      email: formData.email.trim() || "未記入",
+      message: formData.message.trim(),
+      subject:
+        choice === "question"
+          ? "質問"
+          : choice === "comment"
+          ? "感想"
+          : "フィードバック",
+    };
+
     try {
       const res = await fetch("/api/sendMail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(dataToSend),
       });
       const result = await res.json();
       setStatus(result.success ? "✅ 送信完了しました！" : "❌ 送信に失敗しました。");

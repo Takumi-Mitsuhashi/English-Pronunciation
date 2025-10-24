@@ -6,10 +6,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method Not Allowed" });
   }
 
-  const { name, email, message } = req.body;
+  const { name = "匿名", email = "未記入", message, subject = "不明" } = req.body;
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ success: false, message: "全ての項目を入力してください" });
+  if (!message) {
+    return res.status(400).json({ success: false, message: "内容を入力してください" });
   }
 
   const transporter = nodemailer.createTransport({
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     const mailBody = `
   【名前】 ${name}
 【Email】 ${email}
-【件名】 ${name}
+【件名】 ${subject}
 【内容】
   ${message}
     `.trim();
@@ -33,7 +33,7 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: process.env.GMAIL_USER,
-      subject: "【お問い合わせ】" + name,
+      subject: `【お問い合わせ】${subject} - ${name}`,
       text: mailBody,
     });
 
