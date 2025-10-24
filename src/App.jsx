@@ -34,7 +34,7 @@ import Alevel28 from "./pages/Alevel28";
 
 import Results from "./pages/Results";
 
-import ContactForm from "./pages/ContactForm";
+// import ContactForm from "./pages/ContactForm";
 
 import Game from "./Game";
 import Gamepage from "./pages/Gamepage/"
@@ -50,7 +50,7 @@ export default function App() {
         <Route>
           <Route path="/" element={<Home />} />
 
-          <Route path="/ContactForm" element={<ContactForm />} />
+          {/* <Route path="/ContactForm" element={<ContactForm />} /> */}
 
           <Route path="/Game" element={<Game />} />
           <Route path="/Game/Gamepage" element={<Gamepage />} />

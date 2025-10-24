@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Bubble.module.css";
+import styles from "./bubble.module.css";
 
 export default function Bubble({ children, side = "left", variant = "primary" }) {
   // side: "left" | "right"
