@@ -31,9 +31,16 @@ import Alevel25 from "./pages/Alevel25";
 import Alevel26 from "./pages/Alevel26";
 import Alevel27 from "./pages/Alevel27";
 import Alevel28 from "./pages/Alevel28";
+import Alevel29 from "./pages/Alevel29";
+import Alevel30 from "./pages/Alevel30";
+import Alevel31 from "./pages/Alevel31";
+import Alevel32 from "./pages/Alevel32";
+import Alevel33 from "./pages/Alevel33";
 
 import Results from "./pages/Results";
 
+import BeforeUse from "./pages/BeforeUse";
+import Manual from "./pages/Manual";
 import ContactForm from "./pages/ContactForm";
 
 import Game from "./Game";
@@ -49,7 +56,8 @@ export default function App() {
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
-
+          <Route path="/BeforeUse" element={<BeforeUse />} />
+          <Route path="/Manual" element={<Manual />} />
           <Route path="/ContactForm" element={<ContactForm />} />
 
           <Route path="/Game" element={<Game />} />
@@ -85,6 +93,11 @@ export default function App() {
           <Route path="/Apage/Alevel26" element={<Alevel26 />} />
           <Route path="/Apage/Alevel27" element={<Alevel27 />} />
           <Route path="/Apage/Alevel28" element={<Alevel28 />} />
+          <Route path="/Apage/Alevel29" element={<Alevel29 />} />
+          <Route path="/Apage/Alevel30" element={<Alevel30 />} />
+          <Route path="/Apage/Alevel31" element={<Alevel31 />} />
+          <Route path="/Apage/Alevel32" element={<Alevel32 />} />
+          <Route path="/Apage/Alevel33" element={<Alevel33 />} />
 
 
           <Route path="/Bpage" element={<Bpage />} />

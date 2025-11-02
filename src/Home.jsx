@@ -11,11 +11,18 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const navigate = useNavigate()
   const [isVisible, setIsVisible] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const handleAgent = () => {
-    requestAnimationFrame(() => {
-      setIsVisible(prev => !prev);
-    });
+    if (!isVisible) {
+      // 開くとき
+      setIsVisible(true);
+      requestAnimationFrame(() => setIsActive(true)); // 少し遅らせてアニメーションをトリガー
+    } else {
+      // 閉じるとき
+      setIsActive(false);
+      setTimeout(() => setIsVisible(false), 0); // transition時間に合わせて
+    }
   };
 
   return (
@@ -38,20 +45,26 @@ export default function Home() {
           </button>
         </div>
       </div>
-      {isVisible && (
-        <div className={`${styles.wrapper} ${isVisible ? styles.active : ""}`}>
+        {isVisible && (
+          <div className={`${styles.wrapper} ${isActive ? styles.active : ""}`}>
         
-          <div className={styles.listContainer}>
-            <button className={styles.agentbtnnext}>
+          <div className={`${styles.listContainer} ${isActive ? styles.active : ""}`}>
+            <button 
+              className={`${styles.agentbtnnext} ${styles.btn1}`}
+              onClick={() => navigate("/BeforeUse")}
+            >
               はじめに
               <img src={arrowright} className={styles.arrowright}/>
             </button>
-            <button className={styles.agentbtnnext}>
+            <button
+              className={`${styles.agentbtnnext} ${styles.btn2}`}
+              onClick={() => navigate("/Manual")}
+            >
               アプリの使い方
               <img src={arrowright} className={styles.arrowright}/>
             </button>
             <button 
-              className={styles.agentbtnnext}
+              className={`${styles.agentbtnnext} ${styles.btn3}`}
               onClick={() => navigate("/ContactForm")}
             >
               お問い合わせ
@@ -59,25 +72,15 @@ export default function Home() {
             </button>
           </div>
           <div className={styles.btnContainer}>
-          <button 
-            className={styles.agentbtn}
-            onClick={handleAgent}
-          >
-            <img src={agent} />
-          </button>
+            <button 
+              className={styles.agentbtn}
+              onClick={handleAgent}
+            >
+              <img src={agent} />
+            </button>
           </div>
-          {/* <div className={styles.closebtnContainer}>
-              <button 
-                className={styles.closebtn}
-                onClick={handleAgent}
-              >
-                <img src={close} />
-                閉じる
-              </button>
-          </div> */}
         </div>
-        
-      )}
+        )}
     </>
   )
 }

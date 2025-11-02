@@ -57,7 +57,11 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: rgba(255, 255, 255, 0.8);
+    /* background-color: white; */
+    /* background-color: rgba(255, 255, 255, 0); */
+    /* background-color: lightblue; */
+    /* opacity: 0; */
+    background-color: #f8f6fc;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -65,6 +69,9 @@
     /* padding-left: 5px; */
     padding-bottom: 100px;
     box-sizing: border-box;
+    
+    transition: background-color 1s ease;
+    /* transition: opacity 1s ease; */
 }
 
 .listContainer {
@@ -78,6 +85,24 @@
     display: flex;
     gap: 10px;
     flex-direction: column;
+}
+
+.listContainer.active .btn1 {
+    opacity: 1;
+    transition-delay: 0s;
+    transform: translateY(0);
+}
+
+.listContainer.active .btn2 {
+    opacity: 1;
+    transition-delay: 0.15s;
+    transform: translateY(0);
+}
+
+.listContainer.active .btn3 {
+    opacity: 1;
+    transition-delay: 0.3s;
+    transform: translateY(0);
 }
 
 /* .listContainer {
@@ -138,6 +163,9 @@
     color: black;
     font-weight: bold;
     font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-10px);
 }
 
 .agentbtnnext::before {

@@ -10,7 +10,7 @@ export default function Alevel20() {
   { word1: "shock", ipa1: "/ʃɑːk/", word2: "sock", ipa2: "/sɑːk/", audio1: "/audios/En-us-shock.mp3", audio2: "/audios/En-us-sock.mp3", answer1: "shock", answer2: "sock" },
   { word1: "sun", ipa1: "/sʌn/", word2: "shun", ipa2: "/ʃʌn/", audio1: "/audios/En-us-sun.mp3", audio2: "/audios/En-us-shun.mp3", answer1: "sun", answer2: "shun" },
   { word1: "same", ipa1: "/seɪm/", word2: "shame", ipa2: "/ʃeɪm/", audio1: "/audios/En-us-same.mp3", audio2: "/audios/En-us-shame.mp3", answer1: "same", answer2: "shame" },
-  { word1: "shell", ipa1: "/ʃel/", word2: "sell", ipa2: "/sel/", audio1: "/audios/En-us-shell.mp3", audio2: "/audios/En-us-sell.mp3", answer1: "shell", answer2: "sell" },
+  { word1: "shell", ipa1: "/ʃɛl/", word2: "sell", ipa2: "/sɛl/", audio1: "/audios/En-us-shell.mp3", audio2: "/audios/En-us-sell.mp3", answer1: "shell", answer2: "sell" },
   { word1: "shoe", ipa1: "/ʃuː/", word2: "sue", ipa2: "/suː/", audio1: "/audios/En-us-shoe.mp3", audio2: "/audios/En-us-sue.mp3", answer1: "shoe", answer2: "sue" },
 ];
 

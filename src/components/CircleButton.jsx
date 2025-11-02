@@ -34,7 +34,7 @@ export default function CircleButton() {
         </button>
       </div> */}
       <button
-          className={styles.circleButton}
+          className={styles.circleButton1}
           onClick={() => navigate("/Apage")}
         >
           <div className={styles.imgContainer}><img src={leaf}/></div>
@@ -42,16 +42,18 @@ export default function CircleButton() {
           <img src={arrowright} className={styles.arrow}/>
       </button>
       <button
-          className={styles.circleButton}
+          className={styles.circleButton2}
           onClick={() => navigate("/Bpage")}
+          disabled
         >
           <div className={styles.imgContainer}><img src={leaves}/></div>
           <strong style={{color: "black"}}>フレーズ</strong>
           <img src={arrowright} className={styles.arrow} />
       </button>
       <button
-          className={styles.circleButton}
+          className={styles.circleButton3}
           onClick={() => navigate("/Cpage")}
+          disabled
         >
           <div className={styles.imgContainer}><img src={tree}/></div>
           <strong style={{color: "black"}}>文章</strong>

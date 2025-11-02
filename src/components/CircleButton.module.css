@@ -4,7 +4,7 @@ body {
 }
 
 
-.circleButton {
+.circleButton1, .circleButton2, .circleButton3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -23,14 +23,25 @@ body {
   position: relative;
 }
 
-.circleButton:hover {
+.circleButton1:hover {
   transform: translateY(-4px);
   box-shadow: 8px 8px 16px #b0b0b0, -8px -8px 16px #ffffff;
 }
 
-.circleButton:active {
+.circleButton1:active {
   transform: translateY(0);
   /* box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff; */
+}
+
+.circleButton2::after, .circleButton3::after {
+  content: "Coming Soon";
+  width: 300px;
+  color: lightgrey;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
 }
 
 .imgContainer {

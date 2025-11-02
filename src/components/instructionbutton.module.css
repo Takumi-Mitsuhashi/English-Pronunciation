@@ -1,0 +1,164 @@
+.infobtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  margin-right: 70px;
+  /* position: absolute;
+  top: 10%; 
+  right: 18%;
+  transform: translate(0, -50%); */
+  z-index: 2;
+  scale: 0.8;
+  cursor: pointer;
+}
+
+.containerWrapper {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    /* border: 1px solid black; */
+}
+
+.instructionContainer {
+    width: 82%;
+    height: 68%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    border-radius: 10px;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.closebtn {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    z-index: 5;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* h2 {
+    margin-top: 30px;
+} */
+
+.titleContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.title {
+  display: inline-block;
+  width: 90%;
+  padding: 10px 20px;
+  text-align: center;
+  /* margin-top: 10px; */
+  background: #ffffff;
+  /* border-bottom: 3px solid #ccc;  */
+  /* border-right: 3px solid #ccc;   */
+  border-bottom: 3px solid rgb(173, 116, 173);
+  border-right: 3px solid rgb(173, 116, 173);
+  border-top: 1px solid #f5f5f5;   /* 上に少し明るい線（ハイライト） */
+  border-left: 1px solid #f5f5f5;  /* 左にもハイライト */
+  /* border-radius: 6px; */
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ソフトな影でさらに立体感 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* .title:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+} */
+
+
+.subtitle {
+    /* border-left: 3px solid #A260BF;
+    padding-left: 7px; */
+    /* font-weight: bold; */
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.subtitle2 {
+    border-left: 3px solid purple;
+    padding-left: 10px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+/* ul, li {
+    border: 1px solid black;
+} */
+
+.firstlist {
+    display: flex;
+    margin: 20px 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 22px;
+}
+
+span {
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 10px;
+    color: rgb(66, 66, 66);
+}
+
+.examplewords {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.listContainer li {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.last {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
