@@ -5,19 +5,19 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 
-import homepage from "../assets/images/IMG_3403.JPG"
+import homepage from "../assets/images/IMG_3403.jpg"
 
-import vowelpage from "../assets/images/IMG_3405.JPEG"
-import consonantpage from "../assets/images/IMG_3406.JPEG"
-import instructionpage from "../assets/images/IMG_3413.JPG"
-import quizpage from "../assets/images/IMG_3407.JPG"
-import resultpage from "../assets/images/IMG_3412.JPG"
+import vowelpage from "../assets/images/IMG_3405.jpeg"
+import consonantpage from "../assets/images/IMG_3406.jpeg"
+import instructionpage from "../assets/images/IMG_3413.jpg"
+import quizpage from "../assets/images/IMG_3407.jpg"
+import resultpage from "../assets/images/IMG_3412.jpg"
 
-import doujo from "../assets/images/IMG_3404.JPEG";
-import doujopage from "../assets/images/IMG_3408.JPEG"
-import doujoresult from "../assets/images/IMG_3411.JPG";
+import doujo from "../assets/images/IMG_3404.jpeg";
+import doujopage from "../assets/images/IMG_3408.jpeg"
+import doujoresult from "../assets/images/IMG_3411.jpg";
 
-import support from "../assets/images/IMG_3410.JPG";
+import support from "../assets/images/IMG_3410.jpg";
 
 
 export default function Manual() {
